@@ -24,11 +24,12 @@ def getAnswer():
   x1 = BBOX.pop()
   y0 = BBOX.pop()
   x0 = BBOX.pop()
-  # print(x0, y0, x1 ,y1)
+  # print(x0, y0, x1 ,y1)xxq
   screen = np.array(ImageGrab.grab(bbox = (x0, y0, x1, y1)))
-  # print(screen)
+  print(screen)
+  scr = json.dumps(screen.tolist(),separators=(',', ':'), sort_keys=True, indent=4)
   msg = [1,2,3]
-  sock.send(bytes(screen))
+  sock.send(scr.encode())
   # screen_gray = cv2.cvtColor(screen, cv2.COLOR_RGB2GRAY)
   # t = pytesseract.image_to_string(screen_gray, lang='rus')
   # t = t.lstrip()

@@ -1,13 +1,14 @@
 const net = require('net')
 const spawn = require('child_process').spawn
+const fs = require('fs')
 
 const connection = (socket) => {
   console.log('Присоединение')
   socket.on('data', (data) => {
     console.log(data.toJSON())
+    fs.writeFileSync('img.txt', data, 'utf-8')
     const pyProcess = spawn('python', [
       'A:\\Python\\openCV\\astSolver\\resolve.py',
-      ...data,
     ])
     pyProcess.stdout.pipe(process.stdout)
     pyProcess.stderr.pipe(process.stderr)
