@@ -1,0 +1,8 @@
+node_modules/
+build/
+dist/
+.vscode/
+__pycache__/
+*.png
+*.txt
+icon.ico
