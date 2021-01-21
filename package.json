@@ -1,0 +1,23 @@
+{
+  "name": "astsolver",
+  "version": "1.0.0",
+  "description": "astSolver",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/woksel/astSolver.git"
+  },
+  "keywords": [
+    "AST",
+    "SOLVER"
+  ],
+  "author": "Ermukhanov Vladimir <ermuhanoff@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/woksel/astSolver/issues"
+  },
+  "homepage": "https://github.com/woksel/astSolver#readme"
+}
